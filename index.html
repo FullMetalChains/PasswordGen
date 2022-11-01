@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- INSERT HTML HERE -->
+    <div class="container">
+        <h2>Password Generator</h2>
+        <div class="result-container">
+            <span id="result"></span>
+            <button class="btn" id="clipboard">
+                <i class="far fa-clipboard"><img  src="https://img.icons8.com/material-rounded/24/FFFFFF/paste.png"/></i>
+            </button>
+        </div>
+        <div class="settings">
+            <div class="setting">
+                <label>Password length</label>
+                <input type="number" id="length" min='4' max='20' value='20' />
+            </div>
+            <div class="setting">
+                <label>Include uppercase letters</label>
+                <input type="checkbox" id="uppercase" checked />
+            </div>
+            <div class="setting">
+                <label>Include lowercase letters</label>
+                <input type="checkbox" id="lowercase" checked />
+            </div>
+            <div class="setting">
+                <label>Include numbers</label>
+                <input type="checkbox" id="numbers" checked />
+            </div>
+            <div class="setting">
+                <label>Include symbols</label>
+                <input type="checkbox" id="symbols" checked />
+            </div>
+        </div>
+        <button class="btn btn-large" id="generate">
+            Generate password
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src = "password.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- <div class="container">
+    <form>
+        <div class="cardcontent">
+            Hello
+        </div>
+        <div class="cardcontent">
+            <p>
+                Password Length
+            </p>
+            <input id = "p-length" type = "text">
+        </div>
+        <div class="cardcontent">
+            <p>
+                Include uppercase characters
+            </p>
+            <input id="lcase" type = "checkbox" class="check " value ="true">
+        </div>
+        <div class="cardcontent">
+            <p>
+                Include lowercase characters
+            </p>
+            <input  id="ucase" type = "checkbox" class="check" value ="true">
+        </div>
+        <div class="cardcontent">
+            <p>
+                Include numbers
+            </p>
+            <input id="numb" type = "checkbox" class="check" value ="true">
+        </div>                
+        <div class="cardcontent">
+            <p>
+                Include symbols
+            </p>
+            <input id="sym" type = "checkbox" class="check" value ="true">
+        </div>
+    </form>
+</div>
+<script src="password.js" async defer></script> -->
