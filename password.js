@@ -19,6 +19,23 @@ generateEl.addEventListener('click', () => {
 })
 
 
+clipboardEl.addEventListener('click', () => {
+    const textarea = document.createElement('textarea');
+    const password = resultEl.innerHTML;
+    if(!password)
+    {
+        return;
+    }
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+    const c = document.getElementById('clipboardcopy');
+    c.innerHTML = 'Copied to Clipboard!';
+
+})
+
 const randomFunc = {
     lower : genlower,
     upper : genupper,
@@ -44,7 +61,7 @@ function gennum (){
 }
 
 function gensym() {
-	const symbols = '!@#$%^&*(){}[]=<>/,.'
+	const symbols = '!@#$%^&*(){}[]=>/,.'
 	return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
@@ -59,11 +76,11 @@ function generatePassword (lower, upper, number, symbol, length){
         }
     
     )
-    for(let i =0; i < typesCount; i++)
-    {
-        let hold = Object.values(typesArr)[i]
-        console.log(Object.keys(hold)[0])
-    }
+    // for(let i =0; i < typesCount; i++)
+    // {
+    //     let hold = Object.values(typesArr)[i]
+    //     console.log(Object.keys(hold)[0])
+    // }
     if(typesCount === 0)
     {
         return pw;
@@ -73,6 +90,7 @@ function generatePassword (lower, upper, number, symbol, length){
         let rand = Math.floor(Math.random()*typesCount);
         let hold = Object.values(typesArr)[rand]
         pw += randomFunc[Object.keys(hold)[0]]()
+
         // console.log(rand);
         // pw +=
     }
